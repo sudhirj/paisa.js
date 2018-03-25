@@ -1,0 +1,15 @@
+{
+  "name": "sj",
+  "version": "0.0.1",
+  "description": "Transform numbers to Indian money formats and words",
+  "main": "index.js",
+  "repository": "https://github.com/sudhirj/paisa.js",
+  "author": "Sudhir Jonathan",
+  "license": "MIT",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "devDependencies": {
+    "mocha": "^5.0.5"
+  }
+}
