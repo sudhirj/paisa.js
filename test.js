@@ -21,4 +21,9 @@ mocha.describe('paisa', function () {
     assert.equal('393', paisa.format(39334, 0))
     assert.equal('0', paisa.format(0, 0))
   })
+
+  mocha.it('should do formatting with symbol', function () {
+    assert.equal('₹3.34', paisa.formatWithSymbol(334))
+    assert.equal('₹9,723.34', paisa.formatWithSymbol(972334))
+  })
 })

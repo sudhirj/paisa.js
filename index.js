@@ -1,4 +1,6 @@
-exports.format = function (paise, precision) {
+const SYMBOL = exports.SYMBOL = '₹'
+
+const format = exports.format = function (paise, precision) {
   if (precision === undefined) {
     precision = 2
   }
@@ -11,8 +13,8 @@ exports.format = function (paise, precision) {
   return stringParts.join('.')
 }
 
-exports.formatWithSymbol = function (paise) {
-  console.log('WIP')
+exports.formatWithSymbol = function (paise, precision) {
+  return [SYMBOL, format(paise, precision)].join('')
 }
 
 exports.words = function (paise) {
