@@ -1,9 +1,10 @@
 const paisa = require('./index')
-const assert = require('assert');
 
+const assert = require('assert')
+const mocha = require('mocha')
 
-describe('paisa', function () {
-  it('should do simple formatting', function () {
+mocha.describe('paisa', function () {
+  mocha.it('should do simple formatting', function () {
     assert.equal('3.34', paisa.format(334))
     assert.equal('9,723.34', paisa.format(972334))
     assert.equal('792,83,83,393.34', paisa.format(792838339334))
@@ -18,7 +19,6 @@ describe('paisa', function () {
     assert.equal('0.00', paisa.format(0))
     assert.equal('393.3', paisa.format(39334, 1))
     assert.equal('393', paisa.format(39334, 0))
+    assert.equal('0', paisa.format(0, 0))
   })
 })
-
-

@@ -20,19 +20,19 @@ exports.words = function (paise) {
 }
 
 const parse = function (paise) {
-  const little_endian = paise.toString().split('').reverse()
-  const rupee_parts = []
-  const paise_part = []
-  Array(2).fill(2).forEach(function () { paise_part.unshift(little_endian.shift()) })
+  const littleEndian = paise.toString().split('').reverse()
+  const rupeeParts = []
+  const paisePart = []
+  Array(2).fill(2).forEach(function () { paisePart.unshift(littleEndian.shift()) })
   const cycle = [3, 2, 2]
   var cycleIndex = 0
-  while (little_endian.length > 0) {
+  while (littleEndian.length > 0) {
     const part = []
     const cycleSize = cycle[cycleIndex % cycle.length]
-    Array(cycleSize).fill(cycleSize).forEach(function () { part.unshift(little_endian.shift()) })
-    rupee_parts.unshift(part.join(''))
+    Array(cycleSize).fill(cycleSize).forEach(function () { part.unshift(littleEndian.shift()) })
+    rupeeParts.unshift(part.join(''))
     cycleIndex++
   }
 
-  return {rupee: rupee_parts, paise: paise_part.join('')}
+  return {rupee: rupeeParts, paise: paisePart.join('')}
 }
