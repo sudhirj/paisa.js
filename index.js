@@ -1,4 +1,5 @@
 const SYMBOL = exports.SYMBOL = '₹'
+const LABELS = ['', ' thousand', ' lakh', ' crore']
 
 const format = exports.format = (paise, precision) => {
   if (precision === undefined) {
@@ -9,7 +10,7 @@ const format = exports.format = (paise, precision) => {
   if (precision > 0) {
     stringParts.unshift(parts.paise.padStart(2, '0').slice(0, precision))
   }
-  stringParts.unshift(parts.rupee.join(',').padEnd(1, '0'))
+  stringParts.unshift(parts.rupeeParts.join(',').padEnd(1, '0'))
   return stringParts.join('.')
 }
 
@@ -17,8 +18,20 @@ exports.formatWithSymbol = (paise, precision) => {
   return [SYMBOL, format(paise, precision)].join('')
 }
 
+const partInWords = (part) => {
+  
+}
+
 exports.words = (paise) => {
-  console.log('WIP')
+  const parsedParts = parse(paise)
+  const rupeeTextParts = parsedParts.rupeeParts.reverse().reduce((previousValue, currentValue) => {
+    previousValue.push([partInWords(currentValue), LABELS[currentValue.size]].join(''))
+  }, [])
+
+  const text = []
+  if (rupeeTextParts.length) text.push([rupeeTextParts.reverse().join(', '), 'rupees'].join(' '))
+  if (parsedParts.paise.length) text.push([partInWords(parsedParts.paise), 'paise'].join(' '))
+  return text
 }
 
 const parse = (paise) => {
@@ -36,5 +49,5 @@ const parse = (paise) => {
     cycleIndex++
   }
 
-  return {rupee: rupeeParts, paise: paisePart.join('')}
+  return {rupeeParts: rupeeParts, paise: paisePart.join('')}
 }
