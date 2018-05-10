@@ -1,6 +1,6 @@
 # paisa.js
 
-Having trouble figuring out where to put the commas in Indian money? Are you being laze and defaulting to hundreds of thousands and millions instead of lakhs and crores? Default no more! Paisa.js is here to save you. 
+Having trouble figuring out where to put the commas in Indian money? Are you being lazy and defaulting to hundreds of thousands and millions instead of lakhs and crores? Default no more! Paisa.js is here to save you. 
 
 Just do 
 `yarn add paisa`
