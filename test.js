@@ -29,9 +29,9 @@ mocha.describe('paisa', function () {
   })
 
   mocha.it('should convert to words', function () {
-    assert.equal('forty two paise', paisa.words(42))
     assert.equal('two paise', paisa.words(2))
     assert.equal('ten paise', paisa.words(10))
+    assert.equal('forty two paise', paisa.words(42))
     assert.equal('fifteen paise', paisa.words(15))
     assert.equal('ninety two paise', paisa.words(92))
     assert.equal('two rupees, ninety two paise', paisa.words(292))
