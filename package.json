@@ -1,7 +1,7 @@
 {
-  "name": "sj",
+  "name": "paisa.js",
   "version": "0.0.1",
-  "description": "Transform numbers to Indian money formats and words",
+  "description": "Transform numbers to Indian money formats and words - an easy way to format into lakhs / crores.",
   "main": "index.js",
   "repository": "https://github.com/sudhirj/paisa.js",
   "author": "Sudhir Jonathan",
