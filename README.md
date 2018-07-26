@@ -24,4 +24,12 @@ paisa.format(12345678987, 0) // "12,34,56,789"
 paisa.format(10000,2) // "100.00"
 paisa.formatWithSymbol(10000,2) // "₹100.00"
 
+paisa.words(292) // 'two rupees, ninety two paise'
+paisa.words(92348) // 'nine hundred and twenty three rupees, forty eight paise'
+paisa.words(677519385) // 'sixty seven lakh, seventy five thousand, one hundred and ninety three rupees, eighty five paise'
+paisa.words(8677519385) // 'eight crore, sixty seven lakh, seventy five thousand, one hundred and ninety three rupees, eighty five paise'
+paisa.words(50000000) // 'five lakh rupees'
+paisa.words(5000000000) // 'five crore rupees'
+paisa.words(5420000000) // 'five crore, forty two lakh rupees'
+
 ```
