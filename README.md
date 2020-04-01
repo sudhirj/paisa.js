@@ -1,4 +1,6 @@
 # paisa.js
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsudhirj%2Fpaisa.js.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsudhirj%2Fpaisa.js?ref=badge_shield)
+
 
 Having trouble figuring out where to put the commas in Indian money? Are you being lazy and defaulting to hundreds of thousands and millions instead of lakhs and crores? Default no more! Paisa.js is here to save you. 
 
@@ -33,3 +35,7 @@ paisa.words(5000000000) // 'five crore rupees'
 paisa.words(5420000000) // 'five crore, forty two lakh rupees'
 
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsudhirj%2Fpaisa.js.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsudhirj%2Fpaisa.js?ref=badge_large)
